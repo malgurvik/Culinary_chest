@@ -4,13 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3d8110f1-52b8-48c8-b2a7-2ebe8e4800f0" name="Changes" comment="update gitignore">
-      <change beforePath="$PROJECT_DIR$/.idea/CulinaryChest.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/CulinaryChest.iml" afterDir="false" />
+    <list default="true" id="3d8110f1-52b8-48c8-b2a7-2ebe8e4800f0" name="Changes" comment="add main app, templates and static">
+      <change afterPath="$PROJECT_DIR$/culinary_chest/recipes/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/culinary_chest/culinary_chest/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/culinary_chest/culinary_chest/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/culinary_chest/culinary_chest/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/culinary_chest/culinary_chest/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/culinary_chest/main/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/culinary_chest/main/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/culinary_chest/main/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/culinary_chest/main/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/culinary_chest/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/culinary_chest/templates/base.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -85,7 +84,7 @@
       <workItem from="1733304252325" duration="1240000" />
       <workItem from="1733984397182" duration="21000" />
       <workItem from="1733984425541" duration="2082000" />
-      <workItem from="1733998195923" duration="8185000" />
+      <workItem from="1733998195923" duration="10707000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <option name="closed" value="true" />
@@ -103,15 +102,35 @@
       <option name="project" value="LOCAL" />
       <updated>1733304630663</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="add main app, templates and static">
+      <option name="closed" value="true" />
+      <created>1734006527521</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1734006527521</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="initial commit" />
     <MESSAGE value="update gitignore" />
-    <option name="LAST_COMMIT_MESSAGE" value="update gitignore" />
+    <MESSAGE value="add main app, templates and static" />
+    <option name="LAST_COMMIT_MESSAGE" value="add main app, templates and static" />
   </component>
 </project>

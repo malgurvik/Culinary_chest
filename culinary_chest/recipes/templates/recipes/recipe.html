@@ -1,0 +1,100 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+<main class="main-content">
+    <section class="recipe-title-section">
+      <h1 class="recipe-title">Ягодно-фруктовый десерт без выпечки</h1>
+      <div class="recipe-image">
+        <img
+          src="./img/jagodno-fruktovij-desert-bez-vipechki_33095_photo_17051.webp"
+          alt="Grilled Chicken"
+        />
+      </div>
+      <div class="recipe-info">
+        <p><strong>Servings:</strong> 8 people</p>
+        <p><strong>Cooking Time:</strong> 30 minutes</p>
+      </div>
+    </section>
+
+    <!-- Ingredients -->
+
+    <section class="ingredients">
+      <h2>Ingredients</h2>
+      <ul>
+        <li>Сливочное масло 60 г</li>
+        <li>Печенье «Юбилейное» 150 г</li>
+        <li>Желатин 1 столовая ложка</li>
+        <li>Клубничный йогурт 500 г</li>
+        <li>Сахар 1/2 стакана</li>
+        <li>Замороженные ягоды 500 г</li>
+        <li>Сливки 200 г</li>
+      </ul>
+    </section>
+
+    <!-- Instructions -->
+
+    <section class="instructions">
+      <h2>Instructions</h2>
+      <ol>
+        <li>
+          Печенье смолоть блендером в крошку и смешать с маслом, полученное
+          тесто выложить в форму (у нас — 22 см диаметром), разровнять и
+          спрятать в холодильник.
+        </li>
+        <li>
+          Ягоды разморозить, сок слить. В соке развести желатин, дать
+          набухнуть минут 30–40 и подогреть до полного растворения (не
+          доводить до кипения!).
+        </li>
+        <li>
+          В ягоды добавить сахар, несильно размолоть блендером, смешать с
+          йогуртом, добавить желатин, подождать, пока чуть схватиться, и
+          вылить в форму с основой.
+        </li>
+        <li>Дать застыть в холодильнике.</li>
+        <li>
+          Для более праздничного варианта можно взбить 200 мл жирных сливок
+          (не меньше 30%) и добавить в суфле после желатина. Вкус станет еще
+          более сливочным.
+        </li>
+      </ol>
+    </section>
+
+    <!-- Comments Section -->
+
+    <section class="comments">
+      <h2>User Comments</h2>
+
+      <!-- Comment Form -->
+
+      <form class="comment-form">
+        <textarea
+          name="comment"
+          rows="4"
+          placeholder="Write your comment here..."
+          required
+        ></textarea>
+        <button type="submit">Post Comment</button>
+      </form>
+
+      <!-- Comments List -->
+
+      <div class="comments-list">
+        <h3>Recent Comments:</h3>
+        <div class="comment">
+          <p>
+            <strong>John Doe:</strong> I tried this recipe and it turned out
+            amazing!
+          </p>
+        </div>
+        <div class="comment">
+          <p>
+            <strong>Jane Smith:</strong> Great recipe! I added some extra
+            spices and it was delicious.
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+{% endblock content %}
