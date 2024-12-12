@@ -1,0 +1,90 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>{{ title }}</title>
+    <link rel="stylesheet" href="{% static 'vendor/style.css' %}"/>
+</head>
+
+<body>
+<div class="container wrapper">
+    <!-- Header -->
+
+
+    <header class="header">
+        <div class="all-logo">
+            <div class="logo">
+                <a href="{% url 'main:index' %}"
+                ><img src="{% static 'vendor/img/mainlogo.svg' %}" alt="Cooking Chest Logo"
+                /></a>
+            </div>
+            <a href="{% url 'main:index' %}">
+                <h1 class="site-title">Кулинарный<br/>Сундучок</h1>
+            </a>
+        </div>
+        <div class="header-right">
+            <a href="./all_recipes.html">
+                <p>Каталог</p>
+            </a>
+            <a href="./add_recipe.html">
+                <p>Добавить рецепт</p>
+            </a>
+
+            <!-- Search Field -->
+
+            <div class="search-box">
+                <input type="text" placeholder="Search recipes..."/>
+                <button>Search</button>
+            </div>
+
+            <!-- Auth field -->
+
+            <div class="auth-actions">
+                <div class="icon-menu user-icon">
+                    <img src="{% static 'vendor/img/minimalist-user-icon.svg' %}" alt="Icon"/>
+                    <ul class="dropdown-menu">
+                        <li><a href="./profile.html">Мой профиль</a></li>
+                        <li><a href="#">Выйти</a></li>
+                    </ul>
+                </div>
+                <button class="login-btn" id="loginBtn">Log In</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Login Modal -->
+
+    <div class="auth-modal" id="authModal">
+        <div class="auth-modal-content">
+            <span class="close-btn" id="closeAuthModal">&times;</span>
+            <h2>Log In</h2>
+            <form>
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required/>
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required/>
+                <button type="submit">Log In</button>
+                <p class="redirect">
+                    You don't have an account yet?
+                    <a href="./registration.html">Register</a>
+                </p>
+            </form>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    {% block content %}{% endblock content %}
+
+
+    <!-- Footer -->
+
+    <footer class="footer">
+        <p>&copy; 2024 Cooking Chest. All rights reserved.</p>
+    </footer>
+</div>
+
+<script src="{% static 'vendor/script.js' %}"></script>
+</body>
+</html>

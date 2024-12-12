@@ -1,0 +1,83 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+    <main class="main-content">
+        <section class="welcome-content">
+            <div class="welcome-text">
+                <div>
+                    <img src="{% static 'vendor/img/mainlogo.svg' %}" alt="Cooking Chest Logo"/>
+                </div>
+                <div>
+                    <h2>
+                        Простые идеи, удивительные вкусы! Делитесь рецептами,
+                        вдохновляйтесь идеями других и превращайте повседневную готовку
+                        в путешествие по миру вкусов.
+                        <!-- Создавайте, делитесь и наслаждайтесь кулинарными шедеврами. Ваши
+                        рецепты вдохновят тысячи! -->
+                    </h2>
+                </div>
+            </div>
+            <img
+                    src="{% static 'vendor/img/ready-dish-on-the-table-for-cooking--around-food-a.png' %}"
+                    alt="dish-on-the-table-for-cooking"
+            />
+        </section>
+
+        <h2>Недавно добавленные:</h2>
+        <div class="recipe-grid">
+            <div class="recipe-card">
+                <a href="./detail_recipe.html">
+                    <img
+                            src="./img/jagodno-fruktovij-desert-bez-vipechki_33095_photo_17051.webp"
+                            alt="Recipe 1"
+                    />
+                    <h2>Ягодно-фруктовый десерт без выпечки</h2>
+                </a>
+            </div>
+            <div class="recipe-card">
+                <a href="recipe-details.html">
+                    <img src="./img/pasta-karbonara.webp" alt="Recipe 2"/>
+                    <h2>Chocolate Cake</h2>
+                </a>
+            </div>
+            <div class="recipe-card">
+                <a href="recipe-details.html">
+                    <img
+                            src="./img/pibimpap-koreyskoe-blyudo_49883_photo_53669.webp"
+                            alt="Recipe 3"
+                    />
+                    <h2>Vegetable Salad</h2>
+                </a>
+            </div>
+            <div class="recipe-card">
+                <a href="recipe-details.html">
+                    <img
+                            src="./img/salat-nisuaz-s-rukkoloj_25267_photo_9508.webp"
+                            alt="Recipe 4"
+                    />
+                    <h2>Pasta Carbonara</h2>
+                </a>
+            </div>
+            <div class="recipe-card">
+                <a href="recipe-details.html">
+                    <img
+                            src="./img/tomatnij-sup-pjure_20131_photo_4704.webp"
+                            alt="Recipe 5"
+                    />
+                    <h2>Fruit Smoothie</h2>
+                </a>
+            </div>
+            <div class="recipe-card">
+                <a href="recipe-details.html">
+                    <img
+                            src="./img/zakuska-adzhapsandali_14281_photo_91.webp"
+                            alt="Recipe 6"
+                    />
+                    <h2>Fruit Smoothie</h2>
+                </a>
+            </div>
+        </div>
+    </main>
+
+{% endblock content %}
