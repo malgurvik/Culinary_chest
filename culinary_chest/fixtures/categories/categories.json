@@ -1,0 +1,42 @@
+[
+  {
+    "model": "recipes.categories",
+    "pk": 2,
+    "fields": {
+      "name": "Закуски",
+      "slug": "zakuski"
+    }
+  },
+  {
+    "model": "recipes.categories",
+    "pk": 3,
+    "fields": {
+      "name": "Салаты",
+      "slug": "salaty"
+    }
+  },
+  {
+    "model": "recipes.categories",
+    "pk": 4,
+    "fields": {
+      "name": "Первые блюда",
+      "slug": "pervye-blyuda"
+    }
+  },
+  {
+    "model": "recipes.categories",
+    "pk": 5,
+    "fields": {
+      "name": "Основные блюда",
+      "slug": "osnovnye-blyuda"
+    }
+  },
+  {
+    "model": "recipes.categories",
+    "pk": 6,
+    "fields": {
+      "name": "Десерты",
+      "slug": "deserty"
+    }
+  }
+]

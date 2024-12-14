@@ -26,57 +26,19 @@
 
         <h2>Недавно добавленные:</h2>
         <div class="recipe-grid">
+            {% for recipe in recipes %}
             <div class="recipe-card">
                 <a href="./detail_recipe.html">
+                    {% if recipe.image %}
                     <img
-                            src="./img/jagodno-fruktovij-desert-bez-vipechki_33095_photo_17051.webp"
-                            alt="Recipe 1"
+                            src="{{ recipe.image.url }}"
+                            alt="Recipe"
                     />
-                    <h2>Ягодно-фруктовый десерт без выпечки</h2>
+                    {% endif %}
+                    <h2>{{ recipe.name }}</h2>
                 </a>
             </div>
-            <div class="recipe-card">
-                <a href="recipe-details.html">
-                    <img src="./img/pasta-karbonara.webp" alt="Recipe 2"/>
-                    <h2>Chocolate Cake</h2>
-                </a>
-            </div>
-            <div class="recipe-card">
-                <a href="recipe-details.html">
-                    <img
-                            src="./img/pibimpap-koreyskoe-blyudo_49883_photo_53669.webp"
-                            alt="Recipe 3"
-                    />
-                    <h2>Vegetable Salad</h2>
-                </a>
-            </div>
-            <div class="recipe-card">
-                <a href="recipe-details.html">
-                    <img
-                            src="./img/salat-nisuaz-s-rukkoloj_25267_photo_9508.webp"
-                            alt="Recipe 4"
-                    />
-                    <h2>Pasta Carbonara</h2>
-                </a>
-            </div>
-            <div class="recipe-card">
-                <a href="recipe-details.html">
-                    <img
-                            src="./img/tomatnij-sup-pjure_20131_photo_4704.webp"
-                            alt="Recipe 5"
-                    />
-                    <h2>Fruit Smoothie</h2>
-                </a>
-            </div>
-            <div class="recipe-card">
-                <a href="recipe-details.html">
-                    <img
-                            src="./img/zakuska-adzhapsandali_14281_photo_91.webp"
-                            alt="Recipe 6"
-                    />
-                    <h2>Fruit Smoothie</h2>
-                </a>
-            </div>
+            {% endfor %}
         </div>
     </main>
 
