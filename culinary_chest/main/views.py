@@ -7,6 +7,6 @@ def index(request):
     recipe = Recipes.objects.all()
     context = {
         "title": "Кулинарный Сундучок",
-        "recipes": recipe
+        "recipes": recipe,
     }
     return render(request, 'main/index.html', context)

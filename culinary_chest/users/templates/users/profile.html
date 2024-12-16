@@ -1,0 +1,134 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+<main class="main-content">
+    <div class="profile-header">
+      <div class="user-info">
+        <img
+          src="{% static 'vendor/img/minimalist-user-icon.png' %}"
+          alt="User Avatar"
+          class="user-avatar"
+        />
+        <div class="user-details">
+          <h1 class="username">John Doe</h1>
+          <p class="email">johndoe@example.com</p>
+          <p class="additional-info">Member since: January 2023</p>
+          <p class="additional-info">Recipes shared: 12</p>
+          <button class="edit-profile-btn">Edit Profile</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Edit profile -->
+
+    <div class="edit-profile-section" style="display: none">
+      <h2>Edit Profile</h2>
+      <form action="/update-profile" method="POST">
+        <div class="form-group-edit">
+          <label for="username">Username</label>
+          <input
+            type="text"
+            id="username"
+            name="username"
+            value="John Doe"
+            required
+          />
+        </div>
+        <div class="form-group-edit">
+          <label for="email">Email</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            value="johndoe@example.com"
+            required
+          />
+        </div>
+        <div class="form-group-edit">
+          <label for="avatar">Change Avatar</label>
+          <input type="file" id="avatar" name="avatar" accept="image/*" />
+        </div>
+        <button type="submit" class="save-profile-btn">Save Changes</button>
+      </form>
+    </div>
+
+    <!-- Recipes section -->
+
+    <h1>Мои рецепты</h1>
+    <div class="recipe-grid">
+      <div class="recipe-card">
+        <a href="./detail_recipe.html">
+          <img
+            src="./img/jagodno-fruktovij-desert-bez-vipechki_33095_photo_17051.webp"
+            alt="Recipe 1"
+          />
+          <h2>Ягодно-фруктовый десерт без выпечки</h2>
+        </a>
+      </div>
+      <div class="recipe-card">
+        <a href="recipe-details.html">
+          <img src="./img/pasta-karbonara.webp" alt="Recipe 2" />
+          <h2>Chocolate Cake</h2>
+        </a>
+      </div>
+      <div class="recipe-card">
+        <a href="recipe-details.html">
+          <img
+            src="./img/pibimpap-koreyskoe-blyudo_49883_photo_53669.webp"
+            alt="Recipe 3"
+          />
+          <h2>Vegetable Salad</h2>
+        </a>
+      </div>
+      <div class="recipe-card">
+        <a href="recipe-details.html">
+          <img
+            src="./img/salat-nisuaz-s-rukkoloj_25267_photo_9508.webp"
+            alt="Recipe 4"
+          />
+          <h2>Pasta Carbonara</h2>
+        </a>
+      </div>
+      <div class="recipe-card">
+        <a href="recipe-details.html">
+          <img
+            src="./img/tomatnij-sup-pjure_20131_photo_4704.webp"
+            alt="Recipe 5"
+          />
+          <h2>Fruit Smoothie</h2>
+        </a>
+      </div>
+      <div class="recipe-card">
+        <a href="recipe-details.html">
+          <img
+            src="./img/zakuska-adzhapsandali_14281_photo_91.webp"
+            alt="Recipe 6"
+          />
+          <h2>Fruit Smoothie</h2>
+        </a>
+      </div>
+    </div>
+
+    <!-- <div class="recipes-section">
+        <h2>My Recipes</h2>
+        <div class="recipes-grid">
+            <div class="recipe-card">
+                <img src="recipe1.jpg" alt="Recipe 1" class="recipe-image">
+                <h3 class="recipe-title">Recipe Title 1</h3>
+                <a href="/recipe/1" class="view-recipe">View Recipe</a>
+            </div>
+            <div class="recipe-card">
+                <img src="recipe2.jpg" alt="Recipe 2" class="recipe-image">
+                <h3 class="recipe-title">Recipe Title 2</h3>
+                <a href="/recipe/2" class="view-recipe">View Recipe</a>
+            </div>
+            <div class="recipe-card">
+                <img src="recipe3.jpg" alt="Recipe 3" class="recipe-image">
+                <h3 class="recipe-title">Recipe Title 3</h3>
+                <a href="/recipe/3" class="view-recipe">View Recipe</a>
+            </div>
+        </div>
+    </div> -->
+  </main>
+{% endblock content %}

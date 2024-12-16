@@ -1,6 +1,6 @@
 from django.db import models
-from django.contrib.auth.models import User
-
+# from django.contrib.auth.models import User
+from django.conf import settings
 
 class Categories(models.Model):
     name = models.CharField(max_length=100, unique=True, verbose_name="Название")
@@ -38,7 +38,7 @@ class Recipes(models.Model):
     category = models.ForeignKey(
         Categories, on_delete=models.CASCADE, verbose_name="Категория"
     )
-    author = models.ForeignKey(User, on_delete=models.CASCADE, verbose_name="Автор")
+    author = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE, verbose_name="Автор")
 
     class Meta:
         db_table = "recipes"
@@ -51,7 +51,7 @@ class Recipes(models.Model):
 
 class Comments(models.Model):
     content = models.TextField()
-    user = models.ForeignKey(User, on_delete=models.CASCADE, related_name="comments")
+    user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE, related_name="comments")
     recipe = models.ForeignKey(Recipes, on_delete=models.CASCADE, related_name="comments")
     created = models.DateTimeField(auto_now_add=True)
 

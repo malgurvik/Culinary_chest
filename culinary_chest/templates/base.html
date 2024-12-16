@@ -20,7 +20,7 @@
                 ><img src="{% static 'vendor/img/mainlogo.svg' %}" alt="Cooking Chest Logo"
                 /></a>
             </div>
-             <a href="{% url 'main:index' %}">
+            <a href="{% url 'main:index' %}">
                 <h1 class="site-title">Кулинарный<br/>Сундучок</h1>
             </a>
         </div>
@@ -36,7 +36,7 @@
 
             <form class="search-box" role="search" action="{% url 'catalog:search' %}" method="get">
                 <input type="search" name="q" placeholder="Search recipes..."/>
-{#                <button type="submit">Search</button>#}
+                {#                <button type="submit">Search</button>#}
             </form>
 
             <!-- Auth field -->
@@ -45,34 +45,17 @@
                 <div class="icon-menu user-icon">
                     <img src="{% static 'vendor/img/minimalist-user-icon.svg' %}" alt="Icon"/>
                     <ul class="dropdown-menu">
-                        <li><a href="./profile.html">Мой профиль</a></li>
+                        <li><a href="{% url 'users:profile' %}">Мой профиль</a></li>
                         <li><a href="#">Выйти</a></li>
                     </ul>
                 </div>
-                <button class="login-btn" id="loginBtn">Log In</button>
+                <a href="{% url 'user:login' %}">
+                    <button class="login-btn" id="loginBtn">Log In</button>
+                </a>
             </div>
         </div>
     </header>
 
-    <!-- Login Modal -->
-
-    <div class="auth-modal" id="authModal">
-        <div class="auth-modal-content">
-            <span class="close-btn" id="closeAuthModal">&times;</span>
-            <h2>Log In</h2>
-            <form>
-                <label for="username">Username:</label>
-                <input type="text" id="username" name="username" required/>
-                <label for="password">Password:</label>
-                <input type="password" id="password" name="password" required/>
-                <button type="submit">Log In</button>
-                <p class="redirect">
-                    You don't have an account yet?
-                    <a href="./registration.html">Register</a>
-                </p>
-            </form>
-        </div>
-    </div>
 
     <!-- Main Content -->
     {% block content %}{% endblock content %}
