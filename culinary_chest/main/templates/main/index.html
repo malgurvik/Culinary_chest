@@ -28,7 +28,7 @@
         <div class="recipe-grid">
             {% for recipe in recipes %}
             <div class="recipe-card">
-                <a href="./detail_recipe.html">
+                <a href="{% url 'catalog:recipe' recipe.slug %}">
                     {% if recipe.image %}
                     <img
                             src="{{ recipe.image.url }}"

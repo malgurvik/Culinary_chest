@@ -4,6 +4,7 @@ from recipes import views
 app_name = "recipes"
 
 urlpatterns = [
-    path("", views.catalog, name="index"),
-    path("recipe/", views.recipe, name="recipe"),
+    path("search/", views.catalog, name="search"),
+    path("<slug:category_slug>/", views.catalog, name="index"),
+    path("recipe/<slug:recipe_slug>/", views.recipe_detail, name="recipe"),
 ]

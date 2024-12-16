@@ -38,5 +38,13 @@
       "name": "Десерты",
       "slug": "deserty"
     }
+  },
+  {
+    "model": "recipes.categories",
+    "pk": 8,
+    "fields": {
+      "name": "Все рецепты",
+      "slug": "all"
+    }
   }
 ]

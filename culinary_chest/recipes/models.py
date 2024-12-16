@@ -47,3 +47,18 @@ class Recipes(models.Model):
 
     def __str__(self):
         return self.name
+
+
+class Comments(models.Model):
+    content = models.TextField()
+    user = models.ForeignKey(User, on_delete=models.CASCADE, related_name="comments")
+    recipe = models.ForeignKey(Recipes, on_delete=models.CASCADE, related_name="comments")
+    created = models.DateTimeField(auto_now_add=True)
+
+    class Meta:
+        db_table = "comments"
+        verbose_name = "Комментарий"
+        verbose_name_plural = "Комментарии"
+
+    def __str__(self):
+        return f'{self.user.username} - {self.recipe.name}'

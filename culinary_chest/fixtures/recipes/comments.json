@@ -1,0 +1,12 @@
+[
+  {
+    "model": "recipes.comments",
+    "pk": 1,
+    "fields": {
+      "content": "Bla bla bla",
+      "user": 1,
+      "recipe": 1,
+      "created": "2024-12-16T08:48:49.328Z"
+    }
+  }
+]

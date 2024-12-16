@@ -10,8 +10,8 @@
 
 <body>
 <div class="container wrapper">
-    <!-- Header -->
 
+    <!-- Header -->
 
     <header class="header">
         <div class="all-logo">
@@ -20,12 +20,12 @@
                 ><img src="{% static 'vendor/img/mainlogo.svg' %}" alt="Cooking Chest Logo"
                 /></a>
             </div>
-            <a href="{% url 'main:index' %}">
+             <a href="{% url 'main:index' %}">
                 <h1 class="site-title">Кулинарный<br/>Сундучок</h1>
             </a>
         </div>
         <div class="header-right">
-            <a href="{% url 'catalog:index' %}">
+            <a href="{% url 'catalog:index' 'all' %}">
                 <p>Каталог</p>
             </a>
             <a href="./add_recipe.html">
@@ -34,10 +34,10 @@
 
             <!-- Search Field -->
 
-            <div class="search-box">
-                <input type="text" placeholder="Search recipes..."/>
-                <button>Search</button>
-            </div>
+            <form class="search-box" role="search" action="{% url 'catalog:search' %}" method="get">
+                <input type="search" name="q" placeholder="Search recipes..."/>
+{#                <button type="submit">Search</button>#}
+            </form>
 
             <!-- Auth field -->
 

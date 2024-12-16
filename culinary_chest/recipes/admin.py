@@ -1,6 +1,6 @@
 from django.contrib import admin
 
-from recipes.models import Categories, Recipes
+from recipes.models import Categories, Recipes, Comments
 
 # admin.site.register(Categories)
 # admin.site.register(Recipes)
@@ -14,3 +14,5 @@ class CategoriesAdmin(admin.ModelAdmin):
 @admin.register(Recipes)
 class RecipesAdmin(admin.ModelAdmin):
     prepopulated_fields = {"slug": ("name",)}
+
+admin.site.register(Comments)
