@@ -1,6 +1,6 @@
 from django.shortcuts import render, get_list_or_404, get_object_or_404
+from django.contrib.postgres.search import SearchVector, SearchQuery, SearchRank
 from recipes.models import Categories, Recipes
-from django.db.models import Q
 
 
 def catalog(request, category_slug=None):
@@ -9,17 +9,10 @@ def catalog(request, category_slug=None):
     if category_slug == 'all':
         recipes = Recipes.objects.all()
     elif query:
-        if query.isdigit():
-            recipes = Recipes.objects.filter(id=int(query))
-
-        keywords = [word for word in query.split() if len(word) > 2]
-        q_objects = Q()
-
-        for token in keywords:
-            q_objects |= Q(name__icontains=token)
-            q_objects |= Q(description__icontains=token)
-        recipes = Recipes.objects.filter(q_objects)
-        print(q_objects)
+        # recipes = Recipes.objects.filter(name__search=query)
+        vector = SearchVector('name', 'description')
+        query = SearchQuery(query)
+        recipes = Recipes.objects.annotate(rank=SearchRank(vector, query)).filter(rank__gt=0).order_by('-rank')
 
     else:
         recipes = get_list_or_404(Recipes.objects.filter(category__slug=category_slug))

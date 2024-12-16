@@ -4,19 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3d8110f1-52b8-48c8-b2a7-2ebe8e4800f0" name="Changes" comment="add my user tags, fixtures">
+    <list default="true" id="3d8110f1-52b8-48c8-b2a7-2ebe8e4800f0" name="Changes" comment="add comment model and connect postgresql">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/culinary_chest/culinary_chest/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/culinary_chest/culinary_chest/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/culinary_chest/fixtures/categories/categories.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/culinary_chest/fixtures/recipes/recipes.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/culinary_chest/main/templates/main/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/culinary_chest/main/templates/main/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/culinary_chest/recipes/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/culinary_chest/recipes/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/culinary_chest/recipes/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/culinary_chest/recipes/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/culinary_chest/recipes/templates/recipes/catalog.html" beforeDir="false" afterPath="$PROJECT_DIR$/culinary_chest/recipes/templates/recipes/catalog.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/culinary_chest/recipes/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/culinary_chest/recipes/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/culinary_chest/recipes/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/culinary_chest/recipes/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/culinary_chest/static/vendor/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/culinary_chest/static/vendor/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/culinary_chest/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/culinary_chest/templates/base.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -115,7 +106,7 @@
       <workItem from="1734195977762" duration="919000" />
       <workItem from="1734196931379" duration="2220000" />
       <workItem from="1734260942476" duration="9453000" />
-      <workItem from="1734336582853" duration="7452000" />
+      <workItem from="1734336582853" duration="12445000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <option name="closed" value="true" />
@@ -157,7 +148,15 @@
       <option name="project" value="LOCAL" />
       <updated>1734188354562</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="add comment model and connect postgresql">
+      <option name="closed" value="true" />
+      <created>1734344986935</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1734344986935</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -180,6 +179,7 @@
     <MESSAGE value="add main app, templates and static" />
     <MESSAGE value="add recipes app, templates" />
     <MESSAGE value="add my user tags, fixtures" />
-    <option name="LAST_COMMIT_MESSAGE" value="add my user tags, fixtures" />
+    <MESSAGE value="add comment model and connect postgresql" />
+    <option name="LAST_COMMIT_MESSAGE" value="add comment model and connect postgresql" />
   </component>
 </project>

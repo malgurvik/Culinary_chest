@@ -17,8 +17,14 @@
                 </ul>
             </div>
         </section>
-        <section class="recipes-all-card">
-            <!-- Recipe Grid -->
+        
+        <!-- Recipe Grid -->
+         
+        <section class="recipes-all-card">         
+
+            {% if not recipes %}
+            <h1 class='not-found'>По вашему запросу ничего не найдено</h1>
+            {% endif %}
 
             <div class="recipe-grid">
                 {% for recipe in recipes %}
