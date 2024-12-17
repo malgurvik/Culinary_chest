@@ -34,3 +34,8 @@ def recipe_detail(request, recipe_slug):
                "instructions": instructions,
                "comments": comments}
     return render(request, "recipes/recipe.html", context)
+
+
+def add_recipe(request):
+    if request.method == 'POST':
+        pass
