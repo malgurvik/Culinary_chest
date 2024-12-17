@@ -56,6 +56,7 @@ def profile(request):
     else:
         form = ProfileForm(instance=request.user)
         recipes = Recipes.objects.all().filter(author_id= request.user.id)
+
     context = {
         "title": "Мой профиль",
         "form": form,

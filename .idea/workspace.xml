@@ -4,14 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3d8110f1-52b8-48c8-b2a7-2ebe8e4800f0" name="Changes" comment="finished registration and authentication">
-      <change afterPath="$PROJECT_DIR$/culinary_chest/recipes/forms.py" afterDir="false" />
+    <list default="true" id="3d8110f1-52b8-48c8-b2a7-2ebe8e4800f0" name="Changes" comment="start add recipe">
+      <change afterPath="$PROJECT_DIR$/culinary_chest/static/vendor/img/default_recipe_img.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/culinary_chest/culinary_chest/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/culinary_chest/culinary_chest/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/culinary_chest/main/templates/main/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/culinary_chest/main/templates/main/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/culinary_chest/main/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/culinary_chest/main/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/culinary_chest/recipes/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/culinary_chest/recipes/forms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/culinary_chest/recipes/templates/recipes/add_recipe.html" beforeDir="false" afterPath="$PROJECT_DIR$/culinary_chest/recipes/templates/recipes/add_recipe.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/culinary_chest/recipes/templates/recipes/recipe.html" beforeDir="false" afterPath="$PROJECT_DIR$/culinary_chest/recipes/templates/recipes/recipe.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/culinary_chest/recipes/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/culinary_chest/recipes/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/culinary_chest/recipes/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/culinary_chest/recipes/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/culinary_chest/users/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/culinary_chest/users/forms.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/culinary_chest/users/templates/users/profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/culinary_chest/users/templates/users/profile.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/culinary_chest/users/templates/users/registration.html" beforeDir="false" afterPath="$PROJECT_DIR$/culinary_chest/users/templates/users/registration.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/culinary_chest/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/culinary_chest/templates/base.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/culinary_chest/users/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/culinary_chest/users/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -43,32 +46,33 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_MARK_IGNORED_FILES_AS_EXCLUDED&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.OpenDjangoStructureViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.pycharm.django.structure.promotion.once.per.project&quot;: &quot;true&quot;,
-    &quot;django.template.preview.state&quot;: &quot;SHOW_EDITOR&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/malgurvik/PycharmProjects/CulinaryChest/culinary_chest/users&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_MARK_IGNORED_FILES_AS_EXCLUDED": "true",
+    "RunOnceActivity.OpenDjangoStructureViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.pycharm.django.structure.promotion.once.per.project": "true",
+    "django.template.preview.state": "SHOW_EDITOR",
+    "git-widget-placeholder": "master",
+    "last_opened_file_path": "/home/malgurvik/PycharmProjects/CulinaryChest/culinary_chest/static/vendor/img",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;postgresql&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "postgresql"
     ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/culinary_chest/static/vendor/img" />
       <recent name="$PROJECT_DIR$/culinary_chest/users" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
@@ -117,7 +121,9 @@
       <workItem from="1734336582853" duration="19366000" />
       <workItem from="1734370507064" duration="10767000" />
       <workItem from="1734419051631" duration="4312000" />
-      <workItem from="1734433589922" duration="8513000" />
+      <workItem from="1734433589922" duration="9389000" />
+      <workItem from="1734451554088" duration="9846000" />
+      <workItem from="1734464099659" duration="4149000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <option name="closed" value="true" />
@@ -191,7 +197,15 @@
       <option name="project" value="LOCAL" />
       <updated>1734437401012</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="start add recipe">
+      <option name="closed" value="true" />
+      <created>1734446225739</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1734446225739</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -218,6 +232,7 @@
     <MESSAGE value="add search" />
     <MESSAGE value="add user app and finish login" />
     <MESSAGE value="finished registration and authentication" />
-    <option name="LAST_COMMIT_MESSAGE" value="finished registration and authentication" />
+    <MESSAGE value="start add recipe" />
+    <option name="LAST_COMMIT_MESSAGE" value="start add recipe" />
   </component>
 </project>

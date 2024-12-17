@@ -6,10 +6,14 @@
         <section class="recipe-title-section">
             <h1 class="recipe-title">{{ recipe.name }}</h1>
             <div class="recipe-image">
-                <img
-                        src="{{ recipe.image.url }}"
-                        alt=""
-                />
+                {% if recipe.image %}
+                    <img
+                            src="{{ recipe.image.url }}"
+                            alt=""
+                    />
+                {% else %}
+                    <img src="{% static 'vendor/img/default_recipe_img.png' %}" alt=""/>
+                {% endif %}
             </div>
             <div class="recipe-info">
                 <p><strong>Порции:</strong> {{ recipe.portions }}</p>
@@ -35,7 +39,7 @@
         <!-- Ingredients -->
 
         <section class="ingredients">
-            <h2>Ingredients</h2>
+            <h2>Ингредиенты</h2>
             <ul>
                 {% for ingredient in ingredients %}
                     <li>{{ ingredient }}</li>
@@ -46,73 +50,62 @@
         <!-- Instructions -->
 
         <section class="instructions">
-            <h2>Instructions</h2>
+            <h2>Инструкция</h2>
             <ol>
                 {% for line in instructions %}
                     <li>{{ line }}</li>
                 {% endfor %}
-                {% comment %} <li>
-                    Ягоды разморозить, сок слить. В соке развести желатин, дать
-                    набухнуть минут 30–40 и подогреть до полного растворения (не
-                    доводить до кипения!).
-                </li>
-                <li>
-                    В ягоды добавить сахар, несильно размолоть блендером, смешать с
-                    йогуртом, добавить желатин, подождать, пока чуть схватиться, и
-                    вылить в форму с основой.
-                </li>
-                <li>Дать застыть в холодильнике.</li>
-                <li>
-                    Для более праздничного варианта можно взбить 200 мл жирных сливок
-                    (не меньше 30%) и добавить в суфле после желатина. Вкус станет еще
-                </li>
-                    более сливочным. {% endcomment %}
             </ol>
         </section>
 
         <!-- Author -->
 
         <section class="instructions author">
-            <h2>Author</h2>
+            <h2>Добавил</h2>
             <p><strong>{{ recipe.author.username }}</strong></p>
         </section>
 
         <!-- Comments Section -->
 
         <section class="comments">
-            <h2>User Comments</h2>
+            <h2>Комментарии</h2>
 
             <!-- Comments List -->
-    
+
             <div class="comments-list">
-                <h3>Recent Comments:</h3>
-                {% for comment in comments %}
-                <div class="comment">
-                    <p>
-                        <strong>{{ comment.user }}:</strong> {{ comment.content }}
-                    </p>
-                </div>
-                {% endfor %}
-                {% comment %} <div class="comment">
-                    <p>
-                        <strong>Jane Smith:</strong> Great recipe! I added some extra
-                        spices and it was delicious.
-                    </p>
-                </div> {% endcomment %}
+                <h3>Недавние комментарии</h3>
+                {% if comments %}
+                    {% for comment in comments %}
+                        <div class="comment">
+                            <p>
+                                <strong>{{ comment.user }}:</strong> {{ comment.content }}
+                            </p>
+                        </div>
+                    {% endfor %}
+                {% else %}
+                    <div class="comment">
+                        <p><strong>Здесь пока нет комментариев.</strong></p>
+                    </div>
+                {% endif %}
             </div>
 
             <!-- Comment Form -->
 
-            <form class="comment-form">
-        <textarea
-                name="comment"
-                rows="4"
-                placeholder="Write your comment here..."
-                required
-        ></textarea>
-                <button type="submit">Post Comment</button>
-            </form>
-
+            {% if user.is_authenticated %}
+                <form class="comment-form" method="POST">
+                {% csrf_token %}
+{#                {{ form }}#}
+                    <label for="id_content"></label>
+                    <textarea
+                            id = "id_content"
+                            name="content"
+                            rows="4"
+                            placeholder="Оставьте свой комментарий здесь..."
+                            required
+                    ></textarea>
+                    <button type="submit">Post Comment</button>
+                </form>
+            {% endif %}
         </section>
     </main>
 {% endblock content %}

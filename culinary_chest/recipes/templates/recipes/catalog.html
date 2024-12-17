@@ -33,9 +33,11 @@
                             {% if recipe.image %}
                             <img
                                     src="{{ recipe.image.url }}"
-                                    alt="Recipe"
+                                    alt=""
                             />
-                            {% endif %}
+                        {% else %}
+                            <img src="{% static 'vendor/img/default_recipe_img.png' %}" alt=""/>
+                        {% endif %}
                             <h2>{{ recipe.name }}</h2>
                         </a>
                     </div>

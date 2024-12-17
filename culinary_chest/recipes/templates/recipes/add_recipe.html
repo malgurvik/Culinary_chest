@@ -2,82 +2,107 @@
 {% load static %}
 
 {% block content %}
-<main class="main-content">
-    <div class="add-recipe-form">
-      <h1>Add New Recipe</h1>
-      <form
-        action="{% url 'catalog:add' %}"
-        method="POST"
-        enctype="multipart/form-data"
-      >
-        <div class="form-group">
-          <label for="recipe-title">Recipe Title</label>
-          <input
-            type="text"
-            id="recipe-title"
-            name="recipe_title"
-            placeholder="Enter recipe title"
-            required
-          />
-        </div>
+    <main class="main-content">
+        <div class="add-recipe-form">
+            <h1>Add New Recipe</h1>
+            <form
+                    action="{% url 'catalog:add' %}"
+                    method="POST"
+                    enctype="multipart/form-data"
+            >
+                {% csrf_token %}
+{#                {{ form.as_p }}#}
+                <div class="form-group">
+                    <label for="id_name">Название</label>
+                    <input
+                            type="text"
+                            id="id_name"
+                            name="name"
+                            placeholder="Введите название"
+                            required
+                    />
+                </div>
 
-        <div class="form-group">
-          <label for="description">Description</label>
-          <textarea
-            id="description"
-            name="description"
-            rows="4"
-            placeholder="Enter a brief description of the recipe"
-            required
-          ></textarea>
-        </div>
+                <div class="form-group">
+                    <label for="id_description">Описание:</label>
+                    <textarea
+                            id="id_description"
+                            name="description"
+                            rows="4"
+                            placeholder="Введите краткое описание"
+                    ></textarea>
+                </div>
 
-        <div class="form-group">
-          <label for="ingredients">Ingredients</label>
-          <textarea
-            id="ingredients"
-            name="ingredients"
-            rows="6"
-            placeholder="List all ingredients, separated by commas"
-            required
-          ></textarea>
-        </div>
+                <div class="form-group">
+                    <label for="id_ingredients">Ingredients</label>
+                    <textarea
+                            id="id_ingredients"
+                            name="ingredients"
+                            rows="6"
+                            placeholder="Впишите ингредиенты и их количество: каждый пункт с новой строки."
+                            required
+                    ></textarea>
+                </div>
 
-        <div class="form-group">
-          <label for="steps">Steps</label>
-          <textarea
-            id="steps"
-            name="steps"
-            rows="6"
-            placeholder="Describe the steps to prepare the recipe"
-            required
-          ></textarea>
-        </div>
+                <div class="form-group">
+                    <label for="id_portions">Порции</label>
+                    <input type="number"
+                           id="id_portions"
+                           name="portions"
+                    >
+                </div>
 
-        <div class="form-group">
-          <label for="category">Category</label>
-          <select id="category" name="category" required>
-            <option value="">Select a category</option>
-            <option value="appetizer">Appetizer</option>
-            <option value="main-course">Main Course</option>
-            <option value="dessert">Dessert</option>
-            <option value="beverages">Beverages</option>
-          </select>
-        </div>
+                <div class="form-group">
+                    <label for="id_instructions">Инструкция</label>
+                    <textarea
+                            id="id_instructions"
+                            name="instructions"
+                            rows="6"
+                            placeholder="Впишите шаги приготовления: каждый шаг с новой строки, без нумерации."
+                            required
+                    ></textarea>
+                </div>
 
-        <div class="form-group">
-          <label for="image">Upload Image</label>
-          <input
-            type="file"
-            id="image"
-            name="image"
-            accept="image/*"
-            required
-          />
-        </div>
+                <div class="form-group">
+                    <label for="id_cooking_time_hours">Время приготовления — X часов.</label>
+                    <input type="number"
+                           id="id_cooking_time_hours"
+                           name="cooking_time_hours"
+                    >
+                </div>
 
-        <button type="submit" class="submit-btn">Submit Recipe</button>
-      </form>
-    </div>
-  </main>
+                <div class="form-group">
+                    <label for="id_cooking_time_minutes">Время приготовления — X минут.</label>
+                    <input type="number"
+                           id="id_cooking_time_minutes"
+                           name="cooking_time_minutes"
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="id_image">Загрузить изображение</label>
+                    <input
+                            type="file"
+                            id="id_image"
+                            name="image"
+                            accept="image/*"
+                    />
+                </div>
+
+                <div class="form-group">
+                    <label for="id_category">Категория</label>
+                    <select id="id_category" name="category" required>
+                        <option value="">Выберите категорию</option>
+                        <option value="2">Закуски</option>
+                        <option value="3">Салаты</option>
+                        <option value="4">Первые блюда</option>
+                        <option value="5">Основные блюда</option>
+                        <option value="6">Десерты</option>
+                    </select>
+                </div>
+
+                <button type="submit" class="submit-btn">Добавить рецепт</button>
+            </form>
+        </div>
+    </main>
 {% endblock content %}
