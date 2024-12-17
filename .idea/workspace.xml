@@ -4,18 +4,23 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3d8110f1-52b8-48c8-b2a7-2ebe8e4800f0" name="Changes" comment="add search">
-      <change afterPath="$PROJECT_DIR$/culinary_chest/users/forms.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/culinary_chest/users/templates/users/login.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/culinary_chest/users/urls.py" afterDir="false" />
+    <list default="true" id="3d8110f1-52b8-48c8-b2a7-2ebe8e4800f0" name="Changes" comment="add user app and finish login">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/culinary_chest/culinary_chest/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/culinary_chest/culinary_chest/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/culinary_chest/culinary_chest/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/culinary_chest/culinary_chest/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/culinary_chest/main/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/culinary_chest/main/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/culinary_chest/recipes/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/culinary_chest/recipes/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/culinary_chest/static/vendor/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/culinary_chest/static/vendor/script.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/culinary_chest/static/vendor/img/jagodno-fruktovij-desert-bez-vipechki_33095_photo_17051.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/culinary_chest/static/vendor/img/minimalist-user-icon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/culinary_chest/static/vendor/img/minimalist-user-icon.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/culinary_chest/static/vendor/img/pasta-karbonara.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/culinary_chest/static/vendor/img/pibimpap-koreyskoe-blyudo_49883_photo_53669.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/culinary_chest/static/vendor/img/salat-nisuaz-s-rukkoloj_25267_photo_9508.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/culinary_chest/static/vendor/img/tomatnij-sup-pjure_20131_photo_4704.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/culinary_chest/static/vendor/img/zakuska-adzhapsandali_14281_photo_91.webp" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/culinary_chest/static/vendor/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/culinary_chest/static/vendor/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/culinary_chest/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/culinary_chest/templates/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/culinary_chest/users/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/culinary_chest/users/forms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/culinary_chest/users/templates/users/profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/culinary_chest/users/templates/users/profile.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/culinary_chest/users/templates/users/registration.html" beforeDir="false" afterPath="$PROJECT_DIR$/culinary_chest/users/templates/users/registration.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/culinary_chest/users/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/culinary_chest/users/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -118,7 +123,9 @@
       <workItem from="1734196931379" duration="2220000" />
       <workItem from="1734260942476" duration="9453000" />
       <workItem from="1734336582853" duration="19366000" />
-      <workItem from="1734370507064" duration="10323000" />
+      <workItem from="1734370507064" duration="10767000" />
+      <workItem from="1734419051631" duration="4312000" />
+      <workItem from="1734433589922" duration="2929000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <option name="closed" value="true" />
@@ -176,7 +183,15 @@
       <option name="project" value="LOCAL" />
       <updated>1734350236017</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="add user app and finish login">
+      <option name="closed" value="true" />
+      <created>1734383269950</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1734383269950</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -201,6 +216,7 @@
     <MESSAGE value="add my user tags, fixtures" />
     <MESSAGE value="add comment model and connect postgresql" />
     <MESSAGE value="add search" />
-    <option name="LAST_COMMIT_MESSAGE" value="add search" />
+    <MESSAGE value="add user app and finish login" />
+    <option name="LAST_COMMIT_MESSAGE" value="add user app and finish login" />
   </component>
 </project>

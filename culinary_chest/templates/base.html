@@ -42,16 +42,27 @@
             <!-- Auth field -->
 
             <div class="auth-actions">
-                <div class="icon-menu user-icon">
-                    <img src="{% static 'vendor/img/minimalist-user-icon.svg' %}" alt="Icon"/>
-                    <ul class="dropdown-menu">
-                        <li><a href="{% url 'users:profile' %}">Мой профиль</a></li>
-                        <li><a href="#">Выйти</a></li>
-                    </ul>
-                </div>
-                <a href="{% url 'user:login' %}">
-                    <button class="login-btn" id="loginBtn">Log In</button>
-                </a>
+                {% if user.is_authenticated %}
+                    <div class="icon-menu user-icon">
+                        {% if user.image %}
+                            <img src="{{ user.image.url }}" alt="{{ user.username }}">
+                        {% else %}
+                            <img src="{% static 'vendor/img/default_user_icon.png' %}" alt="Icon"/>
+                        {% endif %}
+                        <ul class="dropdown-menu">
+                            <li><a href="{% url 'users:profile' %}">Мой профиль</a></li>
+                            {% if user.is_admin or user.is_staff %}
+                                <li><a href="{% url 'admin:index' %}">Админ</a></li>
+                            {% endif %}
+                            <li><a href="{% url 'user:logout' %}">Выйти</a></li>
+                        </ul>
+                    </div>
+                {% endif %}
+                {% if not user.is_authenticated %}
+                    <a href="{% url 'user:login' %}">
+                        <button class="login-btn" id="loginBtn">Log In</button>
+                    </a>
+                {% endif %}
             </div>
         </div>
     </header>
