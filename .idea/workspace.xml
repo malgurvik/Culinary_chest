@@ -4,18 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3d8110f1-52b8-48c8-b2a7-2ebe8e4800f0" name="Changes" comment="start add recipe">
-      <change afterPath="$PROJECT_DIR$/culinary_chest/static/vendor/img/default_recipe_img.png" afterDir="false" />
+    <list default="true" id="3d8110f1-52b8-48c8-b2a7-2ebe8e4800f0" name="Changes" comment="finished add recipe, comment section,&#10;bugfix">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/culinary_chest/main/templates/main/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/culinary_chest/main/templates/main/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/culinary_chest/main/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/culinary_chest/main/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/culinary_chest/recipes/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/culinary_chest/recipes/forms.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/culinary_chest/recipes/templates/recipes/add_recipe.html" beforeDir="false" afterPath="$PROJECT_DIR$/culinary_chest/recipes/templates/recipes/add_recipe.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/culinary_chest/recipes/templates/recipes/recipe.html" beforeDir="false" afterPath="$PROJECT_DIR$/culinary_chest/recipes/templates/recipes/recipe.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/culinary_chest/recipes/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/culinary_chest/recipes/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/culinary_chest/recipes/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/culinary_chest/recipes/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/culinary_chest/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/culinary_chest/templates/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/culinary_chest/users/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/culinary_chest/users/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,6 +25,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;malgurvik&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/malgurvik/Culinary_chest.git&quot;,
+    &quot;accountId&quot;: &quot;e7691148-94ea-42ee-ad08-7a6cec702f24&quot;
+  }
+}</component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 1
 }</component>
@@ -55,7 +57,7 @@
     "RunOnceActivity.pycharm.django.structure.promotion.once.per.project": "true",
     "django.template.preview.state": "SHOW_EDITOR",
     "git-widget-placeholder": "master",
-    "last_opened_file_path": "/home/malgurvik/PycharmProjects/CulinaryChest/culinary_chest/static/vendor/img",
+    "last_opened_file_path": "/home/malgurvik/PycharmProjects/CulinaryChestDeployTest/Culinary_chest",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -84,8 +86,8 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-js-predefined-d6986cc7102b-deb605915726-JavaScript-PY-243.22562.180" />
-        <option value="bundled-python-sdk-85c76a3b01b3-9a18a617cbe4-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-243.22562.180" />
+        <option value="bundled-js-predefined-d6986cc7102b-deb605915726-JavaScript-PY-243.22562.220" />
+        <option value="bundled-python-sdk-0fc6c617c4bd-9a18a617cbe4-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-243.22562.220" />
       </set>
     </attachedChunks>
   </component>
@@ -123,7 +125,11 @@
       <workItem from="1734419051631" duration="4312000" />
       <workItem from="1734433589922" duration="9389000" />
       <workItem from="1734451554088" duration="9846000" />
-      <workItem from="1734464099659" duration="4149000" />
+      <workItem from="1734464099659" duration="4699000" />
+      <workItem from="1734543787100" duration="966000" />
+      <workItem from="1734643298957" duration="134000" />
+      <workItem from="1734706299234" duration="75000" />
+      <workItem from="1734706393226" duration="728000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <option name="closed" value="true" />
@@ -205,7 +211,15 @@
       <option name="project" value="LOCAL" />
       <updated>1734446225739</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="finished add recipe, comment section,&#10;bugfix">
+      <option name="closed" value="true" />
+      <created>1734469074170</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1734469074170</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -233,6 +247,7 @@
     <MESSAGE value="add user app and finish login" />
     <MESSAGE value="finished registration and authentication" />
     <MESSAGE value="start add recipe" />
-    <option name="LAST_COMMIT_MESSAGE" value="start add recipe" />
+    <MESSAGE value="finished add recipe, comment section,&#10;bugfix" />
+    <option name="LAST_COMMIT_MESSAGE" value="finished add recipe, comment section,&#10;bugfix" />
   </component>
 </project>
