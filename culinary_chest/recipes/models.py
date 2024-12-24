@@ -1,6 +1,7 @@
 from django.db import models
 # from django.contrib.auth.models import User
 from django.conf import settings
+from django.utils.text import slugify
 
 class Categories(models.Model):
     name = models.CharField(max_length=100, unique=True, verbose_name="Название")
@@ -44,6 +45,19 @@ class Recipes(models.Model):
         db_table = "recipes"
         verbose_name = "Рецепт"
         verbose_name_plural = "Рецепты"
+
+    def save(self, *args, **kwargs):
+        if not self.slug:
+            base_slug = slugify(self.name)
+            self.slug = base_slug
+            slug = base_slug
+            num = 1
+            while Recipes.objects.filter(slug=slug).exists():
+                slug = f"{base_slug}-{num}"
+                num += 1
+            self.slug = slug
+            print(slug)
+        super().save(*args, **kwargs)
 
     def __str__(self):
         return self.name

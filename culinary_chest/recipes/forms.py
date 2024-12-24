@@ -1,5 +1,5 @@
 from django import forms
-from django.utils.text import slugify
+# from django.utils.text import slugify
 from recipes.models import Recipes, Comments
 
 
@@ -17,12 +17,12 @@ class RecipeForm(forms.ModelForm):
                   'image',
                   'category')
 
-    def clean_slug(self):
-        slug = self.cleaned_data.get('slug')
-        name = self.cleaned_data.get('name')
-        if not slug:
-            slug = slugify(name)
-        return slug
+    # def clean_slug(self):
+    #     slug = self.cleaned_data.get('slug')
+    #     name = self.cleaned_data.get('name')
+    #     if not slug:
+    #         slug = slugify(name)
+    #     return slug
 
 
 class RecipeCommentsForm(forms.ModelForm):

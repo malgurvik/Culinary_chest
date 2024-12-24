@@ -56,7 +56,7 @@ def recipe_detail(request, recipe_slug):
 @login_required
 def add_recipe(request):
     if request.method == 'POST':
-        form = RecipeForm(data=request.POST)
+        form = RecipeForm(data=request.POST, files=request.FILES)
         if form.is_valid():
             new_recipe = form.save(commit=False)
             new_recipe.author = request.user
